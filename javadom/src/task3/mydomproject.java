@@ -29,16 +29,21 @@ public class mydomproject {
 		Element emailele=doc.createElement("email");
 		Element addressele=doc.createElement("address");
 		Element mobileele=doc.createElement("mobile");
+		Element idele=doc.createElement("id");
+		
 		
 		Text t1=doc.createTextNode("saurbh");		
 		Text t2=doc.createTextNode("sau@123");
 		Text t3=doc.createTextNode("pune");
 		Text t4=doc.createTextNode("73456");
+		Text t5=doc.createTextNode("101");
          
 		nameele.appendChild(t1);
 		nameele.appendChild(t2);
 		nameele.appendChild(t3);
-		nameele.appendChild(t4);//create all data with element
+		nameele.appendChild(t4);
+		nameele.appendChild(t5);
+		//create all data with element
 		
 		//creatae data with brach element
 		
@@ -46,14 +51,15 @@ public class mydomproject {
 		studenttele.appendChild(emailele);
 		studenttele.appendChild(addressele);
 		studenttele.appendChild(mobileele);
-		
+		studenttele.appendChild(idele);
+
 		
 		//create root element
 		rootele.appendChild(studenttele);
 		doc.appendChild(rootele);
 		
 	Transformer t=TransformerFactory.newInstance().newTransformer();
-	t.transform(new DOMSource(doc),new StreamResult(new FileOutputStream("E:\\NEW WORKSPACE\\javadom\\student.xml")));
+	t.transform(new DOMSource(doc),new StreamResult(new FileOutputStream("C:\\Users\\Harish\\git\\Test\\javadom\\student.xml")));
 		System.out.println("xml file generated");
 	
 		
